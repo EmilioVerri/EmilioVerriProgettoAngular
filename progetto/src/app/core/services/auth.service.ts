@@ -8,7 +8,8 @@ export class AuthService {
 
   constructor(private httpCommunications: HttpCommunicationsService) { }
 
-  doLogin(username: string): Observable<User[]>{
-    return this.httpCommunications.retrieveGetCall<User[]>("users", {username});
+  doLogin(username: string, password:string): Observable<User[]>{
+    return this.httpCommunications.retrieveGetCall<User[]>("users", {username}&&{password});
+    
   }
 }

@@ -3,12 +3,14 @@
     {
       "id": 0,
       "username": "LukeSkywa",
+      "password": "123",
       "name": "Luca",
       "surname": "Alicata"
     },
     {
       "id": 1,
       "username": "RedMar",
+      "password": "123",
       "name": "Mario",
       "surname": "Rossi"
     }

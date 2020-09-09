@@ -10,8 +10,8 @@ export class LoginService {
 
   constructor(private router: Router, private authService: AuthService, private store: Store) { }
 
-  executeLogin(username: string) {
-    this.authService.doLogin(username).subscribe((users: User[]) => {
+  executeLogin(username: string, password:string) {
+    this.authService.doLogin(username,password).subscribe((users: User[]) => {
       if (users && users.length > 0) {
         sessionStorage.setItem("user", JSON.stringify(users[0]));
         this.store.dispatch(saveCurrentUser({user: users[0]}));
@@ -25,3 +25,8 @@ export class LoginService {
 
   }
 }
+
+  
+
+  
+
