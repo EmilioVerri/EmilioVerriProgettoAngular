@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "username": "LukeSkywa",
+      "name": "Luca",
+      "surname": "Alicata"
+    },
+    {
+      "id": 1,
+      "username": "RedMar",
+      "name": "Mario",
+      "surname": "Rossi"
+    }
+  ],
+  "todos": [
+    {
+      "id": 0,
+      "title": "Lezione 10/06/2020",
+      "description": "Lezione accademia Bergamo, corso Angular avanzato",
+      "steps": [
+        {
+          "id": 0,
+          "done": true,
+          "title": "Appello"
+        },
+        {
+          "id": 3,
+          "done": false,
+          "title": "Pratica"
+        },
+        {
+          "id": null,
+          "done": true,
+          "title": "xxcv"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "dsfds",
+      "description": "sdfdsf",
+      "users": [
+        "RedMar"
+      ],
+      "steps": [
+        {
+          "done": false,
+          "title": "dfdfds"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Spiegare withLatestFrom",
+      "description": "agganciando l'user",
+      "steps": [
+        {
+          "done": false,
+          "title": "spiegazione"
+        },
+        {
+          "done": false,
+          "title": "dubbi"
+        },
+        {
+          "done": false,
+          "title": "pausa"
+        }
+      ],
+      "users": [
+        "LukeSkywa"
+      ]
+    }
+  ]
+}
