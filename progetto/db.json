@@ -22,13 +22,8 @@
       "description": "Lezione accademia Bergamo, corso Angular avanzato",
       "steps": [
         {
-          "id": 0,
-          "done": true,
-          "title": "Appello"
-        },
-        {
           "id": 3,
-          "done": false,
+          "done": true,
           "title": "Pratica"
         },
         {

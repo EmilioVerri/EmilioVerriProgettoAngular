@@ -6,12 +6,14 @@ import { map, filter } from 'rxjs/operators';
 import { getFirstTodo } from 'src/app/redux/todos';
 import { getCurrentUser } from 'src/app/redux/users';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
 
   get todo(): Observable<Todo>{
     return this.store.pipe(select(getFirstTodo));

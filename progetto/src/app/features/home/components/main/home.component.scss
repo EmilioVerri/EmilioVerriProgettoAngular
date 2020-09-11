@@ -1,0 +1,49 @@
+.immagine{
+    width:10%;
+    height: 10%;
+    right: 50%;
+}
+.testo{
+    text-align: center;
+}
+
+
+
+.grande{
+    width:1500px;
+    height:60px
+}
+
+.piccolo{
+    width:500px;
+    height:60px;
+}
+
+td, th {
+    border:none;
+    padding:8px;
+    background: rgb(122,210,248);
+background: linear-gradient(90deg, rgb(217, 244, 255) 24%, rgb(197, 171, 221) 84%);
+    }
+
+ .colore{
+     color:white;
+     font-size: 25px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ .secondatabella{
+     width:10000px;
+     height:60px;
+     background: rgb(17, 93, 126);
+     background: linear-gradient(90deg, rgba(122,210,248,1) 24%, rgba(194,129,254,1) 84%);
+ }
+
+ .backgroundcomplessivo{
+    background: rgb(53, 174, 226);
+    background: linear-gradient(90deg, rgba(122,210,248,1) 24%, rgba(194,129,254,1) 84%);
+ }
+
+ .grandezza{
+     width:1000px;
+ }

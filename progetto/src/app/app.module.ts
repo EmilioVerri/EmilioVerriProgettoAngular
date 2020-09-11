@@ -11,10 +11,13 @@ import { StoreModule } from '@ngrx/store';
 import { reducers } from './redux';
 import { TodosEffects } from './redux/todos/todos.effects';
 import { RouterEffects } from './redux/router/router.effects';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { RouterEffects } from './redux/router/router.effects';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
-    StoreRouterConnectingModule.forRoot()
+    StoreRouterConnectingModule.forRoot(),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
