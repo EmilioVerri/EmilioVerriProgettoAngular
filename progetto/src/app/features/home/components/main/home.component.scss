@@ -1,10 +1,33 @@
 .immagine{
-    width:10%;
-    height: 10%;
+    width:35px;
+    height: 35px;
     right: 50%;
 }
 .testo{
+   position:relative;
+   top:-25px;
+   left:650px;
     text-align: center;
+    font-size: 18px;
+    color:white;
+}
+button.testo{
+   
+    text-align: center ;
+    position: relative;
+    top:460px;
+    left:640px;
+    width:200px;
+    height:35px;
+    background-color:rgb(194, 128, 255);
+    font-weight: bold;
+     border-radius: 5px; 
+     font-size: 15px;
+     color:white;
+     font-family: Helvetica, Arial, sans-serif;
+     padding: 7px;
+     
+    
 }
 
 
@@ -29,12 +52,14 @@ background: linear-gradient(90deg, rgb(217, 244, 255) 24%, rgb(197, 171, 221) 84
  .colore{
      color:white;
      font-size: 25px;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-family: Verdana, Tahoma, sans-serif;
+     text-align:center;
+     
  }
 
  .secondatabella{
      width:10000px;
-     height:60px;
+     height:90px;
      background: rgb(17, 93, 126);
      background: linear-gradient(90deg, rgba(122,210,248,1) 24%, rgba(194,129,254,1) 84%);
  }
@@ -47,3 +72,18 @@ background: linear-gradient(90deg, rgb(217, 244, 255) 24%, rgb(197, 171, 221) 84
  .grandezza{
      width:1000px;
  }
+
+ .position{
+     position:fixed;
+     top:140px;
+     left:230px;
+ }
+
+
+ .grandezzaimmagine{
+     width:1000px;
+     height:500px;
+     border: none;
+     border-radius: 15px;
+ }
+ 

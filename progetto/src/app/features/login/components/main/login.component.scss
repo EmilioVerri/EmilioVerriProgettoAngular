@@ -1,34 +1,50 @@
 #login{
-    text-align: center;
-    color: red;
-    font-family:  "Times New Roman",verdana, sans-serif;
-    font-size: 22px;
-    line-height: 150%;
-    font-weight: bold;
+  text-align: center;
+  color: red;
+  font-family:  "Times New Roman",verdana, sans-serif;
+  font-size: 22px;
+  line-height: 150%;
+  font-weight: bold;
 }
 
 .form{
-    text-align:center;
+  text-align:center;
 }
 
 div#card{
-   margin: 0 auto;
-   position: absolute;
-   top: 30%;
-   left: 30%;
+ margin: 0 auto;
+ position: absolute;
+ top: 30%;
+ left: 30%;
 }
 
 
-.background{
-    background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
-}
+
 
 #shadow{
-    -webkit-box-shadow: 25px 70px 255px 135px rgba(23,170,214,1);
+  -webkit-box-shadow: 25px 70px 255px 135px rgba(23,170,214,1);
 -moz-box-shadow: 25px 70px 255px 135px rgba(23,170,214,1);
 box-shadow: 25px 70px 255px 135px rgba(23,170,214,1);
 }
 
 .borderRadius{ 
-    border-radius: 20px 20px 20px 20px; 
+  border-radius: 20px 20px 20px 20px; 
+}
+
+
+.background{
+  background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+}
+
+
+
+.btn{
+  width: 100%;
+  background: none;
+  border: 2px solid #4caf50;
+  color: white;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
 }
