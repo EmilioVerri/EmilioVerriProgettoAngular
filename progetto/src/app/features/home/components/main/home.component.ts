@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     return this.store.pipe(
       select(getCurrentUser),
       filter(user => !!user),
-      map(user => user.name)
+      map(user => user.username)
     );
   }
 

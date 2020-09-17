@@ -9,7 +9,7 @@
         src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js"></script>
 </head>
 
-
+<!--
 <div class="background">
 <div class="uk-animation-toggle" tabindex="0" class="background">
     <div class="uk-card uk-card-default uk-card-body uk-animation-slide-top" >
@@ -34,6 +34,25 @@
         </div>
     </div>
 </div>
+</div>-->
+
+<div class='container'>
+    <div class='window'>
+        <div class='overlay'></div>
+        <div class='content'>
+            <div class='welcome'>Benvenuto!</div>
+            
+            <div style="width:60%;height:0;padding-bottom:40%;position:relative;"><iframe src="https://giphy.com/embed/jRZXsVd7xbBAIF08eH"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            <form [formGroup]="loginForm" (ngSubmit)="doLogin()" class='input-fields'>
+                <app-input-text formControlName="username" [label]="'Username:'" class="username-input input-line full-width" placeholder='Username'></app-input-text>
+                <app-input-text formControlName="password" [label]="'Password:'" class="password-input input-line full-width" type='password' placeholder='Password'></app-input-text>
+                <button class="uk-button uk-button-default" class="btn" type="submit" class="login-button">Login</button>
+                <div class='spacing'>non sei ancora registrato?</div>
+                <div><button class='ghost-round full-width' routerLink="/register">Crea un account</button></div>
+            </form>
+            
+        </div>
+    </div>
 </div>
 
 

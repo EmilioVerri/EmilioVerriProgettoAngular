@@ -1,12 +1,15 @@
 <form [formGroup]="todoForm" (ngSubmit)="confirmChanges()">
-    <app-input-text formControlName="title" [label]="'Titolo'"></app-input-text>
-    <app-input-text formControlName="description" [label]="'Descrizione'"></app-input-text>
+    <app-input-text formControlName="title" [label]="'Prodotto'"></app-input-text>
+    <app-input-text formControlName="description" [label]="'Colore Prodotto'"></app-input-text>
+    
     <div formArrayName="steps">
         <ng-container *ngIf="stepsArray.length > 0">
             <div *ngFor="let step of stepsArray; let i=index" [formGroupName]="i">
-                <input type="checkbox" formControlName="done">
-                <app-input-text formControlName="title" [label]="'Titolo Step'"></app-input-text>
+                
+                <app-input-text formControlName="title" [label]="'Testo personalizzato'"></app-input-text>
+                <app-input-text formControlName="title" [label]="'Colore'"></app-input-text>
                 <button type="button" (click)="removeStepToForm(i)">Rimuovi Step</button>
+                
             </div>
         </ng-container>
         <button (click)="addStepToForm()" type="button">Aggiungi Step</button>

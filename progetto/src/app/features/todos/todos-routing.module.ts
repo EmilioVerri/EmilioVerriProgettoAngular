@@ -2,9 +2,10 @@ import { TodoDetailComponent } from './components/todo-detail/todo-detail.compon
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TodosComponent } from './components/main/todos.component';
+
 import { TodoEditComponent } from './components/todo-edit/todo-edit.component';
 import { TodoAddComponent } from './components/todo-add/todo-add.component';
+import { TodosComponent } from './components/main/todos.component';
 
 const routes: Routes = [{
   path: '', component: TodosComponent, children: [

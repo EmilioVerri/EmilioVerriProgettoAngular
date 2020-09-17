@@ -9,3 +9,4 @@ import { AuthService } from './services/auth.service';
   imports: [HttpClientModule]
 })
 export class CoreModule { }
+

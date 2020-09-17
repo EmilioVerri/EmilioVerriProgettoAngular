@@ -12,6 +12,10 @@ import { reducers } from './redux';
 import { TodosEffects } from './redux/todos/todos.effects';
 import { RouterEffects } from './redux/router/router.effects';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RegisterComponent } from './features/register/register.component';
+
+
+
 
 
 
@@ -19,7 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
    
   ],
   imports: [

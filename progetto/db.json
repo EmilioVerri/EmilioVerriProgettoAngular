@@ -2,71 +2,53 @@
   "users": [
     {
       "id": 0,
-      "username": "LukeSkywa",
+      "username": "EmilioVerri",
       "password": "123",
-      "name": "Luca",
-      "surname": "Alicata"
+      "email": "emilioverri83@gmail.com"
     },
     {
       "id": 1,
-      "username": "RedMar",
+      "username": "Giulia",
       "password": "123",
-      "name": "Mario",
-      "surname": "Rossi"
+      "name": "Giulia",
+      "surname": "Pusterla"
     }
   ],
   "todos": [
     {
       "id": 0,
-      "title": "Lezione 10/06/2020",
-      "description": "Lezione accademia Bergamo, corso Angular avanzato",
+      "title": "felpa",
+      "description": "blu",
       "steps": [
         {
-          "id": 3,
-          "done": true,
-          "title": "Pratica"
-        },
-        {
           "id": null,
-          "done": true,
-          "title": "xxcv"
+          "done": false,
+          "title": "mi piace la nutella"
         }
       ]
     },
     {
       "id": 2,
-      "title": "dsfds",
-      "description": "sdfdsf",
-      "users": [
-        "RedMar"
-      ],
+      "title": "t-shirt",
+      "description": "nero",
       "steps": [
         {
-          "done": false,
-          "title": "dfdfds"
+          "id": null,
+          "done": true,
+          "title": "maronne"
         }
       ]
     },
     {
       "id": 3,
-      "title": "Spiegare withLatestFrom",
-      "description": "agganciando l'user",
+      "title": "maglietta",
+      "description": "blu",
       "steps": [
         {
+          "id": null,
           "done": false,
-          "title": "spiegazione"
-        },
-        {
-          "done": false,
-          "title": "dubbi"
-        },
-        {
-          "done": false,
-          "title": "pausa"
+          "title": "marameo"
         }
-      ],
-      "users": [
-        "LukeSkywa"
       ]
     }
   ]

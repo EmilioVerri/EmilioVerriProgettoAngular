@@ -1,13 +1,71 @@
-<div class="container">
+<head>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   
+    <table>
+        <tr>
+            <th class="backgroundcomplessivo">
+        
+        
+    <table class="tabellauno" cellspacing="0" cellpadding="0" rules="none" >
+        <tr>
+            <th class="grande">
+                
+               <div class="colorebianco" > <img src="assets\immagini\home.png" routerLink="/home" class="immaginehome">&nbsp;Home</div>
+            
+
+                <div class="colore">
+                   
+                <span>  Personalizza <b> il tuo prodotto</b></span>
+            </div>
+            
+            
+                <div class="testo"> 
+                <img src="assets\immagini\carrello.png" class="immagine">
+                    &nbsp;&nbsp;Carrello 
+            </div>
+        </th>
+        </tr>
+        
+    </table >
+    <table >
+        <tr>
+            <th class="secondatabella" cellspacing="0" cellpadding="0" rules="none">
+
+            </th>
+        </tr>
+    </table>
+</th>
+</tr>
+</table>
+
+
+
+
     <header>
-        <h1 class="todosHomeTitle">I miei TODO</h1>
-        <p routerLink="/home">Vai alla home</p>
+        <h1 class="todosHomeTitle">Prodotti:</h1>
         <p routerLink="/todos/add">Inserisci nuovo Todo</p>
     </header>
     <section>
         <app-todo-preview *ngFor="let todo of todosList | async" [todo]="todo" (detailEvent)="showDetail(todo)"></app-todo-preview>
     </section>
+    
     <section>
         <router-outlet></router-outlet>
     </section>
-</div>
+
+
