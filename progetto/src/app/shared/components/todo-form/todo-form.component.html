@@ -7,7 +7,7 @@
             <div *ngFor="let step of stepsArray; let i=index" [formGroupName]="i">
                 
                 <app-input-text formControlName="title" [label]="'Testo personalizzato'"></app-input-text>
-                <app-input-text formControlName="title" [label]="'Colore'"></app-input-text>
+                
                 <button type="button" (click)="removeStepToForm(i)">Rimuovi Step</button>
                 
             </div>
