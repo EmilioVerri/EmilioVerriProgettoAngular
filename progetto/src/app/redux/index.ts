@@ -13,7 +13,6 @@ export interface AppState {
 
 export const reducers: ActionReducerMap<AppState> = {
     todoState: todoReducer,
-   
     router: routerReducer,
     authState: authReducer,
 };

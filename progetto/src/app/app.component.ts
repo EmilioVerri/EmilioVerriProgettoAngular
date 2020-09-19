@@ -10,7 +10,7 @@ import { retrieveAllTodos } from './redux/todos/todos.actions';
 })
 export class AppComponent implements OnInit {
 
-    title = 'RossoCommerce';
+    title = 'EmilioCommerce';
   constructor(private store: Store) {
 
   }
