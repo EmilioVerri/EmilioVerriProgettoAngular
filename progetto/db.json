@@ -8,13 +8,6 @@
       "id": 0
     },
     {
-      "id": 1,
-      "username": "RedMar",
-      "password": "123",
-      "name": "Mario",
-      "surname": "Rossi"
-    },
-    {
       "email": "andreafarchi@gmail.com",
       "password": "1234",
       "nome": "Andrea",
@@ -22,95 +15,18 @@
       "id": 2
     },
     {
-      "email": "andreafarchi@gmail.com",
+      "email": "mariopiani@gmail.com",
       "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
+      "nome": "mario",
+      "cognome": "piani",
       "id": 3
     },
     {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
+      "email": "ar@gmail.com",
+      "password": "123",
+      "nome": "antonio",
+      "cognome": "rossi",
       "id": 4
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 5
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 6
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 7
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 8
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 9
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 10
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 11
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 12
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 13
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 14
-    },
-    {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
-      "id": 15
     }
   ],
   "todos": [

@@ -7,6 +7,7 @@ import { getFirstTodo } from 'src/app/redux/todos';
 
 import { Component } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { initUser, loginUser, loginUserSuccess} from 'src/app/redux/autenticazione/autenticazione.actions';
 
 
 @Component({
@@ -21,7 +22,13 @@ export class HomeComponent implements OnInit {
     return this.store.pipe(select(getFirstTodo));
   }
 
- 
+  /*get user(): Observable<string> {
+    return this.store.pipe(
+      select(initUser),
+      filter(user => !!user),
+      map(user => user.user.email)
+    );
+  }*/
 
 
 
