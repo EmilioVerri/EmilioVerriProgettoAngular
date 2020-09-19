@@ -27,6 +27,20 @@
       "nome": "antonio",
       "cognome": "rossi",
       "id": 4
+    },
+    {
+      "email": "ev@gmail.com",
+      "password": "123",
+      "nome": "emilio",
+      "cognome": "verri",
+      "id": 5
+    },
+    {
+      "email": "mr@gmail.com",
+      "password": "123",
+      "nome": "mario",
+      "cognome": "rossi",
+      "id": 6
     }
   ],
   "todos": [

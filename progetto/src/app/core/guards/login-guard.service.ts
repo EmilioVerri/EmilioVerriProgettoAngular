@@ -2,7 +2,7 @@ import { Store } from '@ngrx/store';
 
 import { Injectable } from '@angular/core';
 import { CanLoad, Router } from '@angular/router';
-import { loginUserSuccess } from 'src/app/redux/autenticazione/autenticazione.actions';
+import { loginUserSuccess} from 'src/app/redux/autenticazione/autenticazione.actions';
 
 
 @Injectable({
