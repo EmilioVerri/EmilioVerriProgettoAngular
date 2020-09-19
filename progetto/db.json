@@ -22,19 +22,9 @@
       "description": "Lezione accademia Bergamo, corso Angular avanzato",
       "steps": [
         {
-          "id": 0,
-          "done": true,
-          "title": "Appello"
-        },
-        {
-          "id": 3,
-          "done": false,
-          "title": "Pratica"
-        },
-        {
           "id": null,
           "done": true,
-          "title": "xxcv"
+          "title": "dasddasdas"
         }
       ]
     },
@@ -56,20 +46,10 @@
       "description": "agganciando l'user",
       "steps": [
         {
+          "id": null,
           "done": false,
           "title": "spiegazione"
-        },
-        {
-          "done": false,
-          "title": "dubbi"
-        },
-        {
-          "done": false,
-          "title": "pausa"
         }
-      ],
-      "users": [
-        "LukeSkywa"
       ]
     }
   ]

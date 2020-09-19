@@ -6,9 +6,9 @@
     right: 50%;
 }
 .testo{
-   position:relative;
-   top:-25px;
-   left:650px;
+   position:absolute;
+   top:20px;
+   left:1300px;
     text-align: center;
     font-size: 18px;
     color:white;
@@ -46,7 +46,7 @@ button.testo{
 
 td, th {
     border:none;
-    padding:8px;
+    
     background: rgb(122,210,248);
 background: linear-gradient(90deg, rgb(217, 244, 255) 24%, rgb(197, 171, 221) 84%);
     }
@@ -72,9 +72,7 @@ background: linear-gradient(90deg, rgb(217, 244, 255) 24%, rgb(197, 171, 221) 84
     background: linear-gradient(90deg, rgba(122,210,248,1) 24%, rgba(194,129,254,1) 84%);
  }
 
- .grandezza{
-     width:1000px;
- }
+ 
 
  .position{
      position:fixed;
@@ -99,3 +97,9 @@ background: linear-gradient(90deg, rgb(217, 244, 255) 24%, rgb(197, 171, 221) 84
  .colorebianco{
      color:white
  }
+
+ .tabellauno{
+     width: 1534px;;
+ }
+
+

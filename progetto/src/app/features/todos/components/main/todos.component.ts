@@ -25,4 +25,6 @@ export class TodosComponent implements OnInit {
     this.todosFacadeService.goToDetail(todo.id);
   }
 
+  
+
 }
