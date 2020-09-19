@@ -12,12 +12,8 @@ import { reducers } from './redux';
 import { TodosEffects } from './redux/todos/todos.effects';
 import { RouterEffects } from './redux/router/router.effects';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RegisterComponent } from './features/register/register.component';
-
-
-
-
-
+import { AutenticazioneComponent } from './features/autenticazione/autenticazione.component';
+import {autenticazioneEffects} from './redux/autenticazione/autenticazione.effects';
 
 
 
@@ -31,7 +27,7 @@ import { RegisterComponent } from './features/register/register.component';
     AppRoutingModule,
     CoreModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([TodosEffects, RouterEffects]),
+    EffectsModule.forRoot([TodosEffects, RouterEffects,autenticazioneEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode

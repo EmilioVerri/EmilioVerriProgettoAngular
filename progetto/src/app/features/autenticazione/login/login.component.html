@@ -1,0 +1,9 @@
+<div *ngIf="loginError">
+    <p id="loginError">{{ loginError }}</p>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="loginUtente()">
+    <input type="email" placeholder="mail@mail.com" formControlName="email">
+    <input type="password" placeholder="inserisci password" formControlName="password">
+    <button type="submit">Accedi</button>
+    <a [routerLink]="'/auth/register'">Passa a Registrazione</a>
+  </form>

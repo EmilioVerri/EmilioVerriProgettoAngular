@@ -1,4 +1,4 @@
-import { getCurrentUser } from 'src/app/redux/users';
+
 import { goToTodosHome } from './../../features/todos/redux/todos-navigation.actions';
 import { HttpCommunicationsService } from './../../core/http-communications/http-communications.service';
 import { Injectable } from '@angular/core';
@@ -9,6 +9,7 @@ import { Todo } from 'src/app/core/model/todo.interface';
 import { goToDetail } from 'src/app/features/todos/redux/todos-navigation.actions';
 import { Action, select, Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
+import { initUser } from '../autenticazione/autenticazione.actions';
 
 @Injectable()
 export class TodosEffects {
@@ -27,17 +28,17 @@ export class TodosEffects {
         ))
     ));
 
-    insertTodo$ = createEffect(() => this.actions$.pipe(
+   /* insertTodo$ = createEffect(() => this.actions$.pipe(
         ofType(postTodo),
-        withLatestFrom(this.store.pipe(select(getCurrentUser))),
+        withLatestFrom(this.store.pipe(select(initUser))),
         map(([action, user]) => ({
             ...action.todo,
-            users: [user.username]
+            users: [user.nome]
         })),
         switchMap(todo => this.httpCommunicationsService.retrievePostCall<Todo>("todos", todo).pipe(
             switchMap(todo => [insertTodo({ todo }), goToTodosHome()])
         ))
-    ))
+    ))*/
 
 
     constructor(private actions$: Actions, private store: Store,

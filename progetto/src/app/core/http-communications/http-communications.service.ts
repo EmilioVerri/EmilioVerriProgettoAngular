@@ -5,20 +5,18 @@ import {filter, map} from 'rxjs/operators';
 
 @Injectable()
 export class HttpCommunicationsService {
-
   private host = 'http://localhost:3000/';
-
   constructor(private httpClient: HttpClient) {
   }
-
   retrievePostCall<T>(endpoint: string, body: any): Observable<T> {
     return this.retrieveHttpCall<T>(new HttpRequest<T>('POST', this.host + endpoint, body));
   }
-
   retrievePutCall<T>(endpoint: string, body: any): Observable<T> {
     return this.retrieveHttpCall<T>(new HttpRequest<T>('PUT', this.host + endpoint, body));
   }
-
+  retrievePatchCall<T>(endpoint: string, body: any): Observable<T> {
+    return this.retrieveHttpCall<T>(new HttpRequest<T>('PATCH', this.host + endpoint, body));
+  }
   retrieveGetCall<T>(endpoint: string, params: { [key: string]: string } = null): Observable<T> {
     return this.retrieveHttpCall<T>(new HttpRequest<T>('GET', this.host + endpoint, params ? {
       params: new HttpParams({
@@ -26,11 +24,9 @@ export class HttpCommunicationsService {
       })
     } : undefined));
   }
-
   retrieveDeleteCall<T>(endpoint: string): Observable<T> {
     return this.retrieveHttpCall<T>(new HttpRequest<T>('DELETE', this.host + endpoint));
   }
-
   private retrieveHttpCall<T>(httpRequest: HttpRequest<T>): Observable<T> {
     httpRequest = httpRequest.clone({
       responseType: 'json'
@@ -42,5 +38,4 @@ export class HttpCommunicationsService {
       })
     );
   }
-
 }

@@ -5,6 +5,7 @@ import { InputTextComponent } from './components/input-text/input-text.component
 import { TodoPreviewComponent } from './components/todo-preview/todo-preview.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { TodoFormComponent } from './components/todo-form/todo-form.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TodoFormComponent } from './components/todo-form/todo-form.component';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     CommonModule,

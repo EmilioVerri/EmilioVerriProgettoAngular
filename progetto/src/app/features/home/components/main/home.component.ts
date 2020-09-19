@@ -4,7 +4,7 @@ import { OnInit } from '@angular/core';
 import { Todo } from 'src/app/core/model/todo.interface';
 import { map, filter } from 'rxjs/operators';
 import { getFirstTodo } from 'src/app/redux/todos';
-import { getCurrentUser } from 'src/app/redux/users';
+
 import { Component } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
@@ -21,13 +21,7 @@ export class HomeComponent implements OnInit {
     return this.store.pipe(select(getFirstTodo));
   }
 
-  get user(): Observable<string> {
-    return this.store.pipe(
-      select(getCurrentUser),
-      filter(user => !!user),
-      map(user => user.username)
-    );
-  }
+ 
 
 
 
