@@ -1,7 +1,7 @@
 import { EffectsModule } from '@ngrx/effects';
 import { NgModule } from '@angular/core';
 
-import { TodosRoutingModule } from './shops-routing.module';
+import { ShopsRoutingModule } from './shops-routing.module';
 import { ShopsComponent } from './components/main/shops.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ShopDetailComponent } from './components/shop-detail/shop-detail.component';
@@ -18,7 +18,7 @@ import { ShopsNavigationEffects } from './redux/shops-navigation.effects';
   imports: [
     SharedModule,
     EffectsModule.forFeature([ShopsNavigationEffects]),
-    TodosRoutingModule
+    ShopsRoutingModule
   ]
 })
 export class ShopsModule { }

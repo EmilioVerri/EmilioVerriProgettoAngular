@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './redux';
-import { TodosEffects } from './redux/shops/shops.effects';
+import { ShopsEffects } from './redux/shops/shops.effects';
 import { RouterEffects } from './redux/router/router.effects';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AutenticazioneComponent } from './features/autenticazione/autenticazione.component';
@@ -28,7 +28,7 @@ import {autenticazioneEffects} from './redux/autenticazione/autenticazione.effec
     AppRoutingModule,
     CoreModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([TodosEffects, RouterEffects,autenticazioneEffects]),
+    EffectsModule.forRoot([ShopsEffects, RouterEffects,autenticazioneEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode

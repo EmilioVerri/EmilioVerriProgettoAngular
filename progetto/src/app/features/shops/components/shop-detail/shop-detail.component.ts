@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable, of, Subscription } from 'rxjs';
 import { Shop } from 'src/app/core/model/shop.interface';
 import { filter, mergeMap, switchMap } from 'rxjs/operators';
-import { getTodoById, getCurrentNavigatedTodo } from 'src/app/redux/shops';
+import { getShopById, getCurrentNavigatedShop } from 'src/app/redux/shops';
 import {Router} from '@angular/router';
 
 
@@ -22,15 +22,15 @@ export class ShopDetailComponent {
   
  
 
-  get todo(): Observable<Shop>{
-    return this.store.pipe(select(getCurrentNavigatedTodo));
+  get shop(): Observable<Shop>{
+    return this.store.pipe(select(getCurrentNavigatedShop));
   }
 
-  constructor(private todosFacadeService: ShopsFacadeService, private store: Store, private router: Router) {
+  constructor(private shopsFacadeService: ShopsFacadeService, private store: Store, private router: Router) {
   }
 
-  edit(todo: Shop) {
-    this.todosFacadeService.goToEdit(todo.id);
+  edit(shop: Shop) {
+    this.shopsFacadeService.goToEdit(shop.id);
   }
 
 

@@ -1,10 +1,10 @@
 import { createAction, props } from '@ngrx/store';
 import {Shop } from '../../core/model/shop.interface';
 
-export const initTodos = createAction('[Todos] init', props<{todos: Shop[]}>());
-export const insertTodo = createAction('[Todos] insert', props<{todo: Shop}>());
-export const removeTodo = createAction('[Todos] remove', props<{id: number}>());
-export const editTodo = createAction('[Todos] edit', props<{todo: Shop}>());
-export const retrieveAllTodos =  createAction('[Todos] retrieve all');
-export const updateTodo = createAction('[Todo] update', props<{todo: Shop}>());
-export const postTodo = createAction('[Todo] add to server', props<{todo: Shop}>());
+export const initShops = createAction('[Shops] init', props<{shops: Shop[]}>());
+export const insertShop = createAction('[Shops] insert', props<{shop: Shop}>());
+export const removeShop = createAction('[Shops] remove', props<{id: number}>());
+export const editShop = createAction('[Shops] edit', props<{shop: Shop}>());
+export const retrieveAllShops =  createAction('[Shops] retrieve all');
+export const updateShop = createAction('[Shop] update', props<{shop: Shop}>());
+export const postShop = createAction('[Shop] add to server', props<{shop: Shop}>());

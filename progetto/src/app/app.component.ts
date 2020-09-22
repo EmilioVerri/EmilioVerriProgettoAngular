@@ -1,6 +1,6 @@
 import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
-import { retrieveAllTodos } from './redux/shops/shops.actions';
+import { retrieveAllShops } from './redux/shops/shops.actions';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.store.dispatch(retrieveAllTodos());
+    this.store.dispatch(retrieveAllShops());
   }
 
 

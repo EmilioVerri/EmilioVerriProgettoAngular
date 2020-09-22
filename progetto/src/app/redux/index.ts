@@ -1,18 +1,18 @@
 
-import { TodoState, todoReducer } from './shops/shops.reducers';
+import { ShopState, shopReducer } from './shops/shops.reducers';
 import { ActionReducerMap } from '@ngrx/store';
 import { RouterReducerState, routerReducer } from '@ngrx/router-store';
 import { authReducer, UserState } from './autenticazione/autenticazione.reducers';
 
 export interface AppState {
-    todoState: TodoState;
+    shopState: ShopState;
 
     router: RouterReducerState<any>;
     authState: UserState;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-    todoState: todoReducer,
+    shopState: shopReducer,
     router: routerReducer,
     authState: authReducer,
 };

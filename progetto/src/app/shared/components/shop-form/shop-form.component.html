@@ -1,4 +1,4 @@
-<form [formGroup]="todoForm" (ngSubmit)="confirmChanges()">
+<form [formGroup]="shopForm" (ngSubmit)="confirmChanges()">
     <app-input-text formControlName="title" [label]="'Prodotto'"></app-input-text>
     <app-input-text formControlName="description" [label]="'Colore Prodotto'"></app-input-text>
     
@@ -15,5 +15,5 @@
         <button (click)="addStepToForm()" type="button">Aggiungi Step</button>
     </div>
     <button (click)="cancel()" type="button">Annulla</button>
-    <button type="submit" [disabled]="todoForm.invalid">Conferma</button>
+    <button type="submit" [disabled]="shopForm.invalid">Conferma</button>
 </form>

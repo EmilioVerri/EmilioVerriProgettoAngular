@@ -1,7 +1,7 @@
 import { ShopsFacadeService } from '../services/shops-facade.service';
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { goToDetail, goToTodosHome } from './shops-navigation.actions';
+import { goToDetail, goToShopsHome } from './shops-navigation.actions';
 import { tap } from 'rxjs/operators';
 
 @Injectable()
@@ -10,18 +10,18 @@ export class ShopsNavigationEffects {
     goToDetail$ = createEffect(() => this.actions$.pipe(
         ofType(goToDetail),
         tap(action => {
-            this.todosFacadeService.goToDetail(action.id);
+            this.shopsFacadeService.goToDetail(action.id);
         })
     ), { dispatch: false });
 
-    goToTodosHome$ = createEffect(() => this.actions$.pipe(
-        ofType(goToTodosHome),
+    goToShopsHome$ = createEffect(() => this.actions$.pipe(
+        ofType(goToShopsHome),
         tap(() => {
-            this.todosFacadeService.goToTodosHome();
+            this.shopsFacadeService.goToShopsHome();
         })
     ), { dispatch: false });
 
     constructor(private actions$: Actions,
-        private todosFacadeService: ShopsFacadeService) {
+        private shopsFacadeService: ShopsFacadeService) {
     }
 }

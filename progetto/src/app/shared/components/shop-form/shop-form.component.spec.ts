@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShopFormComponent } from './shop-form.component';
 
-describe('TodoFormComponent', () => {
+describe('ShopFormComponent', () => {
   let component: ShopFormComponent;
   let fixture: ComponentFixture<ShopFormComponent>;
 

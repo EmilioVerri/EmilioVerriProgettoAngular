@@ -9,17 +9,17 @@ import { Shop } from 'src/app/core/model/shop.interface';
 })
 export class ShopAddComponent implements OnInit {
 
-  constructor(private todosFacadeService: ShopsFacadeService) { }
+  constructor(private shopsFacadeService: ShopsFacadeService) { }
 
   ngOnInit(): void {
   }
 
   undo() {
-    this.todosFacadeService.goToTodosHome();
+    this.shopsFacadeService.goToShopsHome();
   }
 
-  addTodo(todo: Shop) {
-    this.todosFacadeService.addTodo(todo);
+  addShop(shop: Shop) {
+    this.shopsFacadeService.addShop(shop);
   }
 
 }

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ShopsFacadeService } from '../../services/shops-facade.service';
 import { Observable } from 'rxjs';
 import { Shop } from 'src/app/core/model/shop.interface';
-import { selectTodos } from 'src/app/redux/shops';
+import { selectShops } from 'src/app/redux/shops';
 
 @Component({
   selector: 'app-shops',
@@ -12,17 +12,17 @@ import { selectTodos } from 'src/app/redux/shops';
 })
 export class ShopsComponent implements OnInit {
 
-  get todosList(): Observable<Shop[]> {
-    return this.store.pipe(select(selectTodos));
+  get shopsList(): Observable<Shop[]> {
+    return this.store.pipe(select(selectShops));
   }
 
-  constructor(private todosFacadeService: ShopsFacadeService, private store: Store) { }
+  constructor(private shopsFacadeService: ShopsFacadeService, private store: Store) { }
 
   ngOnInit(): void {
   }
 
-  showDetail(todo: Shop) {
-    this.todosFacadeService.goToDetail(todo.id);
+  showDetail(shop: Shop) {
+    this.shopsFacadeService.goToDetail(shop.id);
   }
 
   

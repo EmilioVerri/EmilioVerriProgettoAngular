@@ -56,10 +56,10 @@
 
     
         <h1>Prodotti:</h1>
-        <p routerLink="/todos/add">Inserisci nuovo prodotto</p>
+        <p routerLink="/shops/add">Inserisci nuovo prodotto</p>
     
     
-        <app-shop-preview *ngFor="let todo of todosList | async" [todo]="todo" (detailEvent)="showDetail(todo)"></app-shop-preview>
+        <app-shop-preview *ngFor="let shop of shopsList | async" [shop]="shop" (detailEvent)="showDetail(shop)"></app-shop-preview>
     
     
     

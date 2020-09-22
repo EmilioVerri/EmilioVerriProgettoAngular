@@ -1,27 +1,27 @@
-import { TodoState } from './shops.reducers';
+import { ShopState } from './shops.reducers';
 import { createSelector } from '@ngrx/store';
 import { AppState } from '..';
 import { Params } from '@angular/router';
 import { selectRouteParams } from '../router';
 
-export const selectTodosState = (state: AppState) => state.todoState;
-export const selectTodos = createSelector(
-    selectTodosState,
-    (state: TodoState) => state.todos
+export const selectShopsState = (state: AppState) => state.shopState;
+export const selectShops = createSelector(
+    selectShopsState,
+    (state: ShopState) => state.shops
 );
 
-export const getTodoById = createSelector(
-    selectTodosState,
-    (state: TodoState, props: { id: number }) => state.todos.find(item => item.id === props.id)
+export const getShopById = createSelector(
+    selectShopsState,
+    (state: ShopState, props: { id: number }) => state.shops.find(item => item.id === props.id)
 );
 
-export const getCurrentNavigatedTodo = createSelector(
-    selectTodosState,
+export const getCurrentNavigatedShop = createSelector(
+    selectShopsState,
     selectRouteParams,
-    (state: TodoState, params: Params) => state.todos.find(item => item.id === Number(params['id']))
+    (state: ShopState, params: Params) => state.shops.find(item => item.id === Number(params['id']))
 );
 
-export const getFirstTodo = createSelector(
-    selectTodosState,
-    (state: TodoState) => state.todos.length > 0 ? state.todos[0] : null
+export const getFirstShop = createSelector(
+    selectShopsState,
+    (state: ShopState) => state.shops.length > 0 ? state.shops[0] : null
 );

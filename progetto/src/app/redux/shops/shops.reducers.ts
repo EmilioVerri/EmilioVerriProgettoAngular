@@ -1,24 +1,24 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { Shop } from '../../core/model/shop.interface';
-import { initTodos, insertTodo, removeTodo, editTodo } from './shops.actions';
+import { initShops, insertShop, removeShop, editShop } from './shops.actions';
 
-export interface TodoState {
-    todos: Shop[];
+export interface ShopState {
+    shops: Shop[];
     
 }
 
-export const initialState: TodoState = {
-    todos: []
+export const initialState: ShopState = {
+    shops: []
 };
 
-const todosReducerFun = createReducer(
+const shopsReducerFun = createReducer(
     initialState,
-    on(initTodos, (state, { todos }) => ({ ...state, todos: todos })),
-    on(insertTodo, (state, { todo }) => ({ ...state, todos: [...state.todos, todo] })),
-    on(removeTodo, (state, { id }) => ({ ...state, todos: state.todos.filter(item => item.id !== id) })),
-    on(editTodo, (state, { todo }) => ({ ...state, todos: state.todos.map(item => item.id === todo.id ? todo : item) }))
+    on(initShops, (state, { shops }) => ({ ...state, shops: shops })),
+    on(insertShop, (state, { shop }) => ({ ...state, shops: [...state.shops, shop] })),
+    on(removeShop, (state, { id }) => ({ ...state, shops: state.shops.filter(item => item.id !== id) })),
+    on(editShop, (state, { shop }) => ({ ...state, shops: state.shops.map(item => item.id === shop.id ? shop : item) }))
 );
 
-export function todoReducer(state: TodoState | undefined, action: Action) {
-    return todosReducerFun(state, action);
+export function shopReducer(state: ShopState | undefined, action: Action) {
+    return shopsReducerFun(state, action);
 }

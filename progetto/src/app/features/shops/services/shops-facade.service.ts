@@ -1,4 +1,4 @@
-import { updateTodo, postTodo } from '../../../redux/shops/shops.actions';
+import { updateShop, postShop } from '../../../redux/shops/shops.actions';
 import { Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
@@ -9,15 +9,15 @@ export class ShopsFacadeService {
 
   constructor(private router: Router, private store: Store) { }
 
-  editTodo(todo: Shop) {
-    this.store.dispatch(updateTodo({todo}));
+  editShop(shop: Shop) {
+    this.store.dispatch(updateShop({shop}));
   }
 
-  addTodo(todo: Shop) {
-    this.store.dispatch(postTodo({todo}));
+  addShop(shop: Shop) {
+    this.store.dispatch(postShop({shop}));
   }
 
-  goToTodosHome() {
+  goToShopsHome() {
     this.router.navigateByUrl('/shops');
   }
 

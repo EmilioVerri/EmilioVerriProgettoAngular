@@ -1,12 +1,12 @@
 <div>
-    <h4>{{todo?.title}}</h4>
-    <h5>{{todo?.description}}</h5>
-    <ng-container *ngIf="todo != null && todo.users && todo.users.length > 0">
+    <h4>{{shop?.title}}</h4>
+    <h5>{{shop?.description}}</h5>
+    <ng-container *ngIf="shop != null && shop.users && shop.users.length > 0">
         <p> Utenti: </p>
-        <li *ngFor="let user of todo.users">{{user}}</li>
+        <li *ngFor="let user of shop.users">{{user}}</li>
     </ng-container>
-    <div *ngIf="todo != null && todo.steps != null && todo.steps.length > 0">
-        <div *ngFor="let step of todo.steps">
+    <div *ngIf="shop != null && shop.steps != null && shop.steps.length > 0">
+        <div *ngFor="let step of shop.steps">
             <input type="checkbox" [(ngModel)]="step.done" disabled>
             <span>{{step.title}}</span>
         </div>

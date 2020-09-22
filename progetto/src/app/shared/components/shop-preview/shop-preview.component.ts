@@ -9,7 +9,7 @@ import { Shop } from 'src/app/core/model/shop.interface';
 export class ShopPreviewComponent {
 
   @Input()
-  todo: Shop;
+  shop: Shop;
 
   @Output()
   detailEvent: EventEmitter<void> = new EventEmitter();

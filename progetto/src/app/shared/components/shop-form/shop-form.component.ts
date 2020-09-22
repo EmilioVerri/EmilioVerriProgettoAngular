@@ -11,7 +11,7 @@ import { Shop } from 'src/app/core/model/shop.interface';
 export class ShopFormComponent implements OnChanges {
 
   @Input()
-  todo: Shop;
+  shop: Shop;
 
   @Output()
   formSubmitEvent: EventEmitter<Shop> = new EventEmitter();
@@ -19,15 +19,15 @@ export class ShopFormComponent implements OnChanges {
   @Output()
   undoEvent: EventEmitter<Shop> = new EventEmitter();
 
-  todoForm: FormGroup;
+  shopForm: FormGroup;
   stepsArray: ShopStep[] = []
 
   get stepsControl(): FormArray {
-    return this.todoForm.get('steps') as FormArray;
+    return this.shopForm.get('steps') as FormArray;
   }
 
   constructor(private fb: FormBuilder) {
-    this.todoForm = this.fb.group({
+    this.shopForm = this.fb.group({
       id: null,
       title: ['', Validators.required],
       description: ['', Validators.required],
@@ -36,8 +36,8 @@ export class ShopFormComponent implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes && changes['todo'] && this.todo != null) {
-      this.stepsArray = [...this.todo.steps];
+    if (changes && changes['shop'] && this.shop != null) {
+      this.stepsArray = [...this.shop.steps];
       this.stepsControl.clear();
       this.stepsArray.forEach(step => {
         this.stepsControl.push(this.fb.group({
@@ -46,10 +46,10 @@ export class ShopFormComponent implements OnChanges {
           title: [step.title, Validators.required]
         }));
       });
-      this.todoForm.patchValue({
-        id: this.todo.id,
-        title: this.todo.title,
-        description: this.todo.description
+      this.shopForm.patchValue({
+        id: this.shop.id,
+        title: this.shop.title,
+        description: this.shop.description
       })
     }
   }
@@ -72,11 +72,11 @@ export class ShopFormComponent implements OnChanges {
   }
 
   confirmChanges() {
-    this.formSubmitEvent.emit(this.todoForm.value);
+    this.formSubmitEvent.emit(this.shopForm.value);
   }
 
   cancel() {
-    this.undoEvent.emit(this.todoForm.value);
+    this.undoEvent.emit(this.shopForm.value);
   }
 
 }

@@ -1,4 +1,4 @@
 <div class="container">
-    <app-shop-item [todo]="todo | async" (editEvent)="edit($event)"></app-shop-item>
+    <app-shop-item [shop]="shop | async" (editEvent)="edit($event)"></app-shop-item>
 </div>
 <button (click)="cancel()" type="button">Torna alla descrizione</button>

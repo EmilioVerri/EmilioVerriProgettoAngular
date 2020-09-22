@@ -9,7 +9,7 @@ import { Shop } from 'src/app/core/model/shop.interface';
 export class ShopItemComponent {
 
   @Input()
-  todo: Shop;
+  shop: Shop;
 
   @Output()
   editEvent: EventEmitter<Shop> = new EventEmitter();
@@ -17,7 +17,7 @@ export class ShopItemComponent {
   constructor() { }
 
   editClick() {
-    this.editEvent.emit(this.todo);
+    this.editEvent.emit(this.shop);
   }
 
 }
