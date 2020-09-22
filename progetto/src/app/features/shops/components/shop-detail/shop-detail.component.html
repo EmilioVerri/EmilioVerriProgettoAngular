@@ -1,4 +1,6 @@
 <div class="container">
     <app-shop-item [shop]="shop | async" (editEvent)="edit($event)"></app-shop-item>
+    <button (click)="cancel()" type="button" class="">Torna alla descrizione</button>
 </div>
-<button (click)="cancel()" type="button">Torna alla descrizione</button>
+
+

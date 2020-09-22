@@ -4,6 +4,7 @@ import { ShopsFacadeService } from '../../services/shops-facade.service';
 import { Observable } from 'rxjs';
 import { Shop } from 'src/app/core/model/shop.interface';
 import { selectShops } from 'src/app/redux/shops';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-shops',
@@ -21,9 +22,13 @@ export class ShopsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  
   showDetail(shop: Shop) {
     this.shopsFacadeService.goToDetail(shop.id);
   }
+
+  
 
   
 

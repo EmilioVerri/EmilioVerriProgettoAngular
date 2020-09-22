@@ -1,18 +1,19 @@
-import { ShopStep } from '../../../core/model/shop-step.interface';
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { ShopStep } from './../../../core/model/shop-step.interface';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, ChangeDetectionStrategy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { Shop } from 'src/app/core/model/shop.interface';
 
 @Component({
   selector: 'app-shop-form',
   templateUrl: './shop-form.component.html',
-  styleUrls: ['./shop-form.component.scss']
+  styleUrls: ['./shop-form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ShopFormComponent implements OnChanges {
 
   @Input()
   shop: Shop;
-
+  
   @Output()
   formSubmitEvent: EventEmitter<Shop> = new EventEmitter();
 

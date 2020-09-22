@@ -1,15 +1,19 @@
 <div>
-    <h4>{{shop?.title}}</h4>
-    <h5>{{shop?.description}}</h5>
+    
+    <h4>Prodotto: {{shop?.title}}</h4>
+    <h5>Colore: {{shop?.description}}</h5>
+    
     <ng-container *ngIf="shop != null && shop.users && shop.users.length > 0">
-        <p> Utenti: </p>
+        
         <li *ngFor="let user of shop.users">{{user}}</li>
     </ng-container>
     <div *ngIf="shop != null && shop.steps != null && shop.steps.length > 0">
         <div *ngFor="let step of shop.steps">
-            <input type="checkbox" [(ngModel)]="step.done" disabled>
-            <span>{{step.title}}</span>
+            
+            <span>Testo Prodottto: {{step.title}}</span>
         </div>
     </div>
+    
     <button (click)="editClick()">Modifica</button>
 </div>
+

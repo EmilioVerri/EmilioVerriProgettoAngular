@@ -8,6 +8,7 @@ import { getFirstShop } from 'src/app/redux/shops';
 import { Component } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { loginUserSuccess} from 'src/app/redux/autenticazione/autenticazione.actions';
+import { User } from 'src/app/core/model/user.interface';
 
 
 @Component({
@@ -34,6 +35,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     
   }
+
+ 
 }
 
 
