@@ -1,9 +1,9 @@
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { OnInit } from '@angular/core';
-import { Todo } from 'src/app/core/model/todo.interface';
+import { Shop } from 'src/app/core/model/shop.interface';
 import { map, filter } from 'rxjs/operators';
-import { getFirstTodo } from 'src/app/redux/todos';
+import { getFirstTodo } from 'src/app/redux/shops';
 
 import { Component } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
@@ -18,7 +18,7 @@ import { loginUserSuccess} from 'src/app/redux/autenticazione/autenticazione.act
 export class HomeComponent implements OnInit {
 
 
-  get todo(): Observable<Todo>{
+  get todo(): Observable<Shop>{
     return this.store.pipe(select(getFirstTodo));
   }
 

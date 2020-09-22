@@ -1,5 +1,5 @@
 
-import { TodoState, todoReducer } from './todos/todos.reducers';
+import { TodoState, todoReducer } from './shops/shops.reducers';
 import { ActionReducerMap } from '@ngrx/store';
 import { RouterReducerState, routerReducer } from '@ngrx/router-store';
 import { authReducer, UserState } from './autenticazione/autenticazione.reducers';

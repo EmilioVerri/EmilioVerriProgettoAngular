@@ -25,8 +25,9 @@
         <tr>
             <th class="grande">
                 <div class="colore">
+               
                 
-                <span>Welcome to <b>Lillo.it</b></span>
+        <span>  Personalizza <b> il tuo prodotto</b></span>
             </div>
             
             
@@ -48,38 +49,20 @@
 </th>
 </tr>
 </table>
+   
 
 
 
 
-
-
-
-
-
-
-
-<ngb-carousel  class="position">
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img src="../../assets/immagini/maglietta.jpg" alt="Random first slide" class="grandezzaimmagine">
-      </div>
-      
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img src="../../assets/immagini/felpa.jpg" alt="Random second slide" class="grandezzaimmagine">
-      </div>
-      
-    </ng-template>
-    <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-          <img src="../../assets/immagini/maglietta2.jpg" alt="Random first slide" class="grandezzaimmagine">
-        </div>
-        
-      </ng-template>
-    </ngb-carousel>
+    
+        <h1>Prodotti:</h1>
+        <p routerLink="/todos/add">Inserisci nuovo prodotto</p>
     
     
+        <app-shop-preview *ngFor="let todo of todosList | async" [todo]="todo" (detailEvent)="showDetail(todo)"></app-shop-preview>
+    
+    
+    
+        <router-outlet></router-outlet>
+    
 
-  <button routerLink="/shops" class="goToShopLink testo">PERSONALIZZA ORA</button>

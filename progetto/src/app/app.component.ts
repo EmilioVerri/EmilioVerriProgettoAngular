@@ -1,6 +1,6 @@
 import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
-import { retrieveAllTodos } from './redux/todos/todos.actions';
+import { retrieveAllTodos } from './redux/shops/shops.actions';
 
 
 @Component({

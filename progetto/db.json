@@ -41,6 +41,13 @@
       "nome": "mario",
       "cognome": "rossi",
       "id": 6
+    },
+    {
+      "email": "danyange@gmail.com",
+      "password": "123",
+      "nome": "daniele",
+      "cognome": "angelini",
+      "id": 7
     }
   ],
   "todos": [
