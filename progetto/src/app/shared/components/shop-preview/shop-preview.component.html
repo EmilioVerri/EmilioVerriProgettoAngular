@@ -6,22 +6,22 @@
 </div>
 -->
 
-<table class="uk-table">
+<table class="uk-table grandezza">
    
     <thead>
         <tr>
-            <th>IMMAGINE</th>
             <th>PRODOTTO</th>
             <th>DESCRIZIONE</th>
+            <th>DETTAGLIO</th>
             
         </tr>
     </thead>
     
     <tbody>
         <tr>
-            <td><img src="../../assets/immagini/bg.jpg" alt="Random first slide" class="grandezzaimmagine"></td>
             <td><h4>{{shop?.title}}</h4></td>
-            <td><h5>{{shop?.description}} <button (click)="detailClick()">Dettaglio</button></h5></td>
+            <td><h5>{{shop?.description}}</h5></td>
+            <td> <button (click)="detailClick()">Dettaglio</button></td>
             <td></td>
         </tr>
         

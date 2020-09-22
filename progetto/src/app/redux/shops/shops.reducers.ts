@@ -22,3 +22,10 @@ const shopsReducerFun = createReducer(
 export function shopReducer(state: ShopState | undefined, action: Action) {
     return shopsReducerFun(state, action);
 }
+
+
+export function shopCart(state: ShopState | undefined, action: Action) {
+    return shopsReducerFun(state, action);
+}
+
+

@@ -25,3 +25,4 @@ export const getFirstShop = createSelector(
     selectShopsState,
     (state: ShopState) => state.shops.length > 0 ? state.shops[0] : null
 );
+
