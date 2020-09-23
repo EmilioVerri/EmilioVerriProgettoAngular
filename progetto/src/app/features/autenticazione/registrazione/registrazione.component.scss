@@ -227,15 +227,15 @@
   }
   
   .overlay {
-      background: -webkit-linear-gradient(#8CA6DB, #B993D6);
-      background: linear-gradient(#8CA6DB, #B993D6);
-      opacity: 0.85;
-      filter: alpha(opacity=85);
-      height: 560px;
-      position: absolute;
-      width: 360px;
-      z-index: 1;
-  }
+    background: -webkit-linear-gradient(#8CA6DB, #c98219);
+    background: linear-gradient(#8CA6DB, #c98219);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    height: 560px;
+    position: absolute;
+    width: 360px;
+    z-index: 1;
+}
   
   .bold-line {
       background: #e7e7e7;
