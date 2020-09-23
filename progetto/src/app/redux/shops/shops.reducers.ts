@@ -11,7 +11,7 @@ export const initialState: ShopState = {
     shops: []
 };
 
-const shopsReducerFun = createReducer(
+const shopsReducerFun = createReducer( //creiamo un reducer
     initialState,
     on(initShops, (state, { shops }) => ({ ...state, shops: shops })),
     on(insertShop, (state, { shop }) => ({ ...state, shops: [...state.shops, shop] })),
@@ -25,7 +25,7 @@ export function shopReducer(state: ShopState | undefined, action: Action) {
 
 
 export function shopCart(state: ShopState | undefined, action: Action) {
-    return shopsReducerFun(state, action);
+    return shopsReducerFun(state, action);//dentro a shopCart andiamo a richiamare shopsReducerFun
 }
 
 

@@ -22,19 +22,19 @@ export class ShopDetailComponent {
   
  
 
-  get shop(): Observable<Shop>{
-    return this.store.pipe(select(getCurrentNavigatedShop));
+  get shop(): Observable<Shop>{     //shop() e dico che è un observable dell'interfaccia shop
+    return this.store.pipe(select(getCurrentNavigatedShop));// fa riferimento all'index.ts di shops
   }
 
-  constructor(private shopsFacadeService: ShopsFacadeService, private store: Store, private router: Router) {
+  constructor(private shopsFacadeService: ShopsFacadeService, private store: Store, private router: Router) {//passo il facade, lo store e il router
   }
 
   edit(shop: Shop) {
-    this.shopsFacadeService.goToEdit(shop.id);
+    this.shopsFacadeService.goToEdit(shop.id); //richamo nel facadeService goToEdit e gli passo lo id dell'interfaccia shop
   }
 
 
-  cancel() {
+  cancel() {//torna alla shops
     this.router.navigateByUrl('/shops');
   }
 

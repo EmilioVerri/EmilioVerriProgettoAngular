@@ -1,4 +1,4 @@
-export interface User {
+export interface User { //definisco interfaccia dove prendo user
     nome?: string;
     cognome?: string;
     email: string;

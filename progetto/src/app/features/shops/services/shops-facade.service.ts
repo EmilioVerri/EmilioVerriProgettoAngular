@@ -19,32 +19,32 @@ export class ShopsFacadeService {
   constructor(private shopsServerService: ShopsServerService,private router: Router, private store: Store) { }
 
 
-  getAllShops() {
+  getAllShops() {// creo funzione getAllShops 
 
-    this.shopsServerService.retrieveAllShops().subscribe(shops => {
+    this.shopsServerService.retrieveAllShops().subscribe(shops => { //prendo la funzione retrieveAllShops dentro serverService
       this.todsSubject.next(shops);
     });
   }
   editShop(shop: Shop) {
-    this.store.dispatch(updateShop({shop}));
+    this.store.dispatch(updateShop({shop}));//questa funzione fa riferimento alla action updateShop e gli passo shop
   }
 
-  addShop(shop: Shop) {
-    this.shopsServerService.insertShop(shop).subscribe(() => {
-        this.getAllShops();
-        this.goToShopsHome();
+  addShop(shop: Shop) {//la funzione aggiungi allo shop gli passo come valori shop
+    this.shopsServerService.insertShop(shop).subscribe(() => {  //vado a richiamare il service nel core module e faccio funzione insert passandogli shop
+        this.getAllShops();//richiamo getAllschop
+        this.goToShopsHome();//richiamo funzione goToSchopsHome
       });
     }
 
-  goToShopsHome() {
+  goToShopsHome() { //naviga verso shops
     this.router.navigateByUrl('/shops');
   }
 
-  goToDetail(id: number) {
-    this.router.navigateByUrl('/shops/detail/' + id);
+  goToDetail(id: number) {// viene preso l'id di quella selezionata
+    this.router.navigateByUrl('/shops/detail/' + id);// naviga verso l'elemento selezionato
   }
   
-  goToEdit(id: number) {
+  goToEdit(id: number) {// va a fare una navigazione verso l'elemento selezionato
     this.router.navigateByUrl('/shops/edit/' + id);
   }
 

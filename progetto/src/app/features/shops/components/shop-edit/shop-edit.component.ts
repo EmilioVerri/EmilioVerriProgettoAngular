@@ -20,11 +20,11 @@ export class ShopEditComponent {
   constructor(private shopsFacadeService: ShopsFacadeService, private store: Store) {
   }
 
-  editForm(shop: Shop) {
+  editForm(shop: Shop) {// funzione editForm va a richiamare editShop dentro shops-facade
     this.shopsFacadeService.editShop(shop);
   }
 
-  undo(shop: Shop) {
+  undo(shop: Shop) {// funzione undo va a richiamare goToDetail dentro shops-facade
     this.shopsFacadeService.goToDetail(shop.id);
   }
 

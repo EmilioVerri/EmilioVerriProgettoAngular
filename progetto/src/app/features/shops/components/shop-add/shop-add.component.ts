@@ -14,12 +14,12 @@ export class ShopAddComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  undo() {
+  undo() { //richiama funzione goToSchopsHome
     this.shopsFacadeService.goToShopsHome();
   }
 
-  addShop(shop: Shop) {
-    this.shopsFacadeService.addShop(shop);
+  addShop(shop: Shop) {//funzione add per aggiungere ancora un articolo
+    this.shopsFacadeService.addShop(shop);//richiamo funzione addShop e gli passo shop
   }
 
 }

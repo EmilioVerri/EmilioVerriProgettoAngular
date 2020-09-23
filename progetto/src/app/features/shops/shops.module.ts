@@ -12,7 +12,7 @@ import { ShopsNavigationEffects } from './redux/shops-navigation.effects';
 
 
 
-@NgModule({
+@NgModule({ //definizione dei componenti presenti
   declarations: [ShopsComponent, ShopDetailComponent, ShopEditComponent, ShopAddComponent],
   providers: [ShopsFacadeService],
   imports: [

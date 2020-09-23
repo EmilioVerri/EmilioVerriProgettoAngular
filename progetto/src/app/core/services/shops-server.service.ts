@@ -6,22 +6,14 @@ import { Shop } from '../model/shop.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class ShopsServerService {
-    constructor(private httpCommunications: HttpCommunicationsService) { }
+export class ShopsServerService { //service definita per fare l'aggiungi al db del prodotto creato
+    constructor(private httpCommunications: HttpCommunicationsService) { } //nel costruttore importo httpComunications
 
-    retrieveAllShops(): Observable<Shop[]>{
-      return this.httpCommunications.retrieveGetCall<Shop[]>("shops");
-    }
-  
-    retrieveShopById(id: number): Observable<Shop>{
-      return this.httpCommunications.retrieveGetCall<Shop>("shops/"+id);
-    }
-  
-    updateShop(shop: Shop): Observable<Shop>{
-      return this.httpCommunications.retrievePutCall("shops/"+shop.id, shop);
+    retrieveAllShops(): Observable<Shop[]>{// fa riferimento alla shops-facede-service.ts
+      return this.httpCommunications.retrieveGetCall<Shop[]>("shops");//faccio get
     }
   
     insertShop(shop: Shop): Observable<Shop>{
-      return this.httpCommunications.retrievePostCall("shops", shop);
+      return this.httpCommunications.retrievePostCall("shops", shop);//faccio post
     }
 }

@@ -7,7 +7,7 @@ import { ShopEditComponent } from './components/shop-edit/shop-edit.component';
 import { ShopAddComponent } from './components/shop-add/shop-add.component';
 import { ShopsComponent } from './components/main/shops.component';
 
-const routes: Routes = [{
+const routes: Routes = [{ //definisco la rout della shops
   path: '', component: ShopsComponent, children: [
     {path: 'detail/:id', component: ShopDetailComponent},
     {path: 'edit/:id', component: ShopEditComponent},

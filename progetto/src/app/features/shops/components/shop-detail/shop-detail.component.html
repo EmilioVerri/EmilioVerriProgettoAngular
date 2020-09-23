@@ -1,6 +1,6 @@
 <div class="container">
-    <app-shop-item [shop]="shop | async" (editEvent)="edit($event)"></app-shop-item>
-    <button (click)="cancel()" type="button" class="">Torna alla descrizione</button>
+    <app-shop-item [shop]="shop | async" (editEvent)="edit($event)"></app-shop-item><!--richiamo funzione edit e gli passo evento-->
+    <button (click)="cancel()" type="button" class="">Torna alla descrizione</button><!--funzione cancel per tornare alla descrizione dell'elemento-->
 </div>
 
 

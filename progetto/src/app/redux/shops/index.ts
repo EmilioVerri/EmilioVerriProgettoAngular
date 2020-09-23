@@ -4,7 +4,7 @@ import { AppState } from '..';
 import { Params } from '@angular/router';
 import { selectRouteParams } from '../router';
 
-export const selectShopsState = (state: AppState) => state.shopState;
+export const selectShopsState = (state: AppState) => state.shopState;// va a fare riferimento nell'appState
 export const selectShops = createSelector(
     selectShopsState,
     (state: ShopState) => state.shops
@@ -16,9 +16,9 @@ export const getShopById = createSelector(
 );
 
 export const getCurrentNavigatedShop = createSelector(
-    selectShopsState,
-    selectRouteParams,
-    (state: ShopState, params: Params) => state.shops.find(item => item.id === Number(params['id']))
+    selectShopsState,//va a prendere la selectShopsState
+    selectRouteParams,//va nell'index.ts della touter
+    (state: ShopState, params: Params) => state.shops.find(item => item.id === Number(params['id']))//prende il parametro per id
 );
 
 export const getFirstShop = createSelector(

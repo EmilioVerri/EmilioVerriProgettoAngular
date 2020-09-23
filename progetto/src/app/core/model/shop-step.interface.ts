@@ -1,7 +1,7 @@
 /**
  * interfaccia che rappresenta lo step di un Todo
  */
-export interface ShopStep {
+export interface ShopStep { //definisco interfaccia dove salvo lo shop
     /**
      * Definisce l'id dello step
      */

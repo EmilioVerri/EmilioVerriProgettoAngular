@@ -1,6 +1,6 @@
 import { ShopStep } from './shop-step.interface';
 
-export interface Shop {
+export interface Shop { //interfaccio generale
     id: number;
     title: string;
     description: string;
