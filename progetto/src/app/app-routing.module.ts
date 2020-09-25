@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginGuardService } from './core/guard/login-guard.service';
+import { NotfoundComponent } from './features/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'cart', loadChildren: () => import('./features/cart/cart.module').then(m => m.CartModule) },
   { path: 'personalizza/:brand', loadChildren: () => import('./features/personalizza/personalizza.module').then(m => m.PersonalizzaModule) },
+  {path:'**',component: NotfoundComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
