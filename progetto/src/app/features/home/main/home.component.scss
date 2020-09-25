@@ -25,7 +25,7 @@ div:hover {
     }
 .bott {
     text-align: center;
-    margin: 10px auto;
+    
 }
 
 button {
@@ -126,8 +126,24 @@ h3{
 .prova{
     height: 15%;
     background: linear-gradient( to right,#81d2f8 1%, #c081ff 50%);
+    
 }
-.bott {    text-align: center; 
+.bott {    
        margin: 10px auto;
        padding-top: 1px;
+    }
+
+
+    .bottoneg{
+        position: absolute;
+        top:10px;
+        left:250px;
+    }
+
+
+
+    .backgroundmlml{
+        background-image: url("/assets/img/yus.png");
+        background-repeat: no-repeat;
+      background-size: 100%;
     }

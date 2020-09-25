@@ -17,7 +17,7 @@ export class SpedizioneComponent implements OnInit {
 
 
   click(){
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl("/home");
   }
   
     

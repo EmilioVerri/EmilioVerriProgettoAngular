@@ -1,6 +1,6 @@
 <div class="prova">
 
-
+<div class="backgroundmlml">
 <ngb-carousel>
     <ng-template ngbSlide *ngFor="let item of yugioh|async">
     
@@ -13,9 +13,12 @@
         <br>
         
       </div>
-      <div class="bott">
-      <button id="prenota" [routerLink]="['/personalizza', item.brand]" type="submit" routerLinkActive="active">PERSONALIZZA ORA</button>
-    </div>
+      
+      <button  [routerLink]="['/personalizza', item.brand]" type="submit" routerLinkActive="active" class="bottoneg">PERSONALIZZA ORA</button>
+      
+    
     </ng-template>
 
   </ngb-carousel>
+  
+</div>
