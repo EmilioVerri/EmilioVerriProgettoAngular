@@ -1,23 +1,28 @@
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { Component, OnInit } from '@angular/core';
-import { retrieveAllShops } from './redux/shops/shops.actions';
-
+import { retrieveAllProducts } from './redux/yugioh/yugioh.action';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
+  title = 'e-commerce';
+  currentRoute: string = null;
 
-    title = 'EmilioCommerce';
-  constructor(private store: Store) {
-
-  }
+  constructor(private router: Router, private store: Store) { }
 
   ngOnInit(): void {
-    this.store.dispatch(retrieveAllShops());
+    this.router.events.subscribe(value => {
+      this.currentRoute = this.router.url.toString();
+    });
+    this.store.dispatch(retrieveAllProducts());
   }
 
-
+  isLog(): boolean {
+    if (this.currentRoute === "/login" || this.currentRoute === "/register") 
+    return true
+  }
 }

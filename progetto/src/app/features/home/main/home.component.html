@@ -1,0 +1,21 @@
+<div class="prova">
+
+
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let item of yugioh|async">
+    
+      <div class="picsum-img-wrapper">
+        <img [src]="item.img" alt="Random second slide">
+      </div>
+    
+      <div class="carousel-caption">
+        <h3>{{item.brand}}</h3>
+        <br>
+        
+      </div>
+      <div class="bott">
+      <button id="prenota" [routerLink]="['/personalizza', item.brand]" type="submit" routerLinkActive="active">PERSONALIZZA ORA</button>
+    </div>
+    </ng-template>
+
+  </ngb-carousel>

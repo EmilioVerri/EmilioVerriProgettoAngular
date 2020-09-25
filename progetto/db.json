@@ -1,90 +1,90 @@
 {
   "users": [
     {
-      "email": "aldo@mail.com",
-      "password": "1234",
-      "nome": "aldo",
-      "cognome": "baglio",
+      "username": "mordiop99",
+      "name": "Mor",
+      "surname": "Diop",
+      "password": "123",
       "id": 0
     },
     {
-      "email": "andreafarchi@gmail.com",
-      "password": "1234",
-      "nome": "Andrea",
-      "cognome": "Farchi",
+      "username": "peinda",
+      "name": "diop",
+      "surname": "mordiop@gmail.com",
+      "password": "diop",
+      "id": 1
+    },
+    {
+      "username": "ev",
+      "name": "trr",
+      "surname": "trrttr",
+      "password": "123",
       "id": 2
-    },
-    {
-      "email": "mariopiani@gmail.com",
-      "password": "1234",
-      "nome": "mario",
-      "cognome": "piani",
-      "id": 3
-    },
-    {
-      "email": "ar@gmail.com",
-      "password": "123",
-      "nome": "antonio",
-      "cognome": "rossi",
-      "id": 4
-    },
-    {
-      "email": "ev@gmail.com",
-      "password": "123",
-      "nome": "emilio",
-      "cognome": "verri",
-      "id": 5
-    },
-    {
-      "email": "mr@gmail.com",
-      "password": "123",
-      "nome": "mario",
-      "cognome": "rossi",
-      "id": 6
-    },
-    {
-      "email": "danyange@gmail.com",
-      "password": "123",
-      "nome": "daniele",
-      "cognome": "angelini",
-      "id": 7
     }
   ],
-  "shops": [
+  "yugioh": [
     {
       "id": 0,
-      "title": "maglietta",
-      "description": "arancione",
-      "steps": [
-        {
-          "id": null,
-          "done": false,
-          "title": "peppeepeee"
-        }
-      ]
+      "brand": "DragoPolvereDiStelle Maligno",
+      "price": 180,
+      "color": "white",
+      "img": "assets/img/DragoPolvereDiStelle/drg1.JPG"
+    },
+    {
+      "id": 1,
+      "brand": "DragoPolvereDiStelle Assalto",
+      "price": 225,
+      "color": "black",
+      "img": "assets/img/DragoPolvereDiStelle/drg2.JPG"
     },
     {
       "id": 2,
-      "title": "maglietta",
-      "description": "blue",
-      "steps": [
-        {
-          "id": null,
-          "done": false,
-          "title": "macco"
-        }
-      ]
+      "brand": "DragoPolvereDiStelle",
+      "price": 225,
+      "color": "gray",
+      "img": "assets/img/DragoPolvereDiStelle/drg3.JPG"
     },
     {
       "id": 3,
-      "title": "pantaloni",
-      "description": "giallo",
-      "steps": [
-        {
-          "done": false,
-          "title": "bhononso"
-        }
-      ]
+      "brand": "ArcidemoneDragoRosso",
+      "price": 225,
+      "color": "black",
+      "img": "assets/img/ArcidemoneDragoRosso/droos1.JPG"
+    },
+    {
+      "id": 4,
+      "brand": "ArcidemoneDragoRosso Lucesfregio",
+      "price": 199,
+      "color": "white",
+      "img": "assets/img/ArcidemoneDragoRosso/droos2.JPG"
+    },
+    {
+      "id": 5,
+      "brand": "ArcidemoneDragoRosso Assalto",
+      "price": 199,
+      "color": "yellow",
+      "img": "assets/img/ArcidemoneDragoRosso/droos3.JPG"
+    },
+    {
+      "id": 6,
+      "brand": "MagoNero",
+      "price": 330,
+      "color": "white",
+      "img": "assets/img/MagoNero/magg1.JPG"
+    },
+    {
+      "id": 7,
+      "brand": "MagoNero del Caos",
+      "price": 330,
+      "color": "gray",
+      "img": "assets/img/MagoNero/magg2.JPG"
+    },
+    {
+      "id": 8,
+      "brand": "MagoNero Toon",
+      "price": 330,
+      "color": "yellow",
+      "img": "assets/img/MagoNero/magg3.JPG"
     }
   ]
 }

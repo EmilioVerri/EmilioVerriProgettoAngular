@@ -1,0 +1,103 @@
+.form-control::placeholder  {
+    font-family: FontAwesome;
+    padding: 20px 0px 0 0;
+    }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    background: linear-gradient( to right,#addefa 1%, #cab9fe 40%);
+    background: linear-gradient( to left,#cab9fe 5%,  #addefa 50%);
+    }
+    .prova{
+        height: 15%;
+        background: linear-gradient( to right,#81d2f8 1%, #c081ff 50%);
+    }
+.one {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 5%;
+    }
+.four {
+    grid-column: 3/ span 4;
+    grid-row: 1;
+    margin-top: 3%;
+    outline: none;
+    }
+.seven {
+    grid-column: 7;
+    grid-row: 1;
+    margin-top: 3%;
+    }
+
+.eight {
+    grid-column: 8;
+    grid-row: 1;
+    margin-top: 5%;
+    }
+h1{
+    color: white;
+    text-align: center;
+}
+.wrapper div {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    padding-top: 13%;
+    }
+
+
+
+.wrapper div:hover {
+    border-bottom: solid white 1px;
+    cursor: pointer;
+    outline: none;
+    }
+
+.wrapper div.active {
+    border-bottom: solid white 1px;
+    outline: none;
+    } 
+
+    ul.dropdown-cart{
+        min-width:250px;
+    }
+    ul.dropdown-cart li .item{
+        display:block;
+        padding:3px 10px;
+        margin: 3px 0;
+    }
+    ul.dropdown-cart li .item:hover{
+        background-color:#f3f3f3;
+    }
+    ul.dropdown-cart li .item:after{
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+    
+    ul.dropdown-cart li .item-left{
+        float:left;
+    }
+    ul.dropdown-cart li .item-left img,
+    ul.dropdown-cart li .item-left span.item-info{
+        float:left;
+    }
+    ul.dropdown-cart li .item-left span.item-info{
+        margin-left:10px;   
+    }
+    ul.dropdown-cart li .item-left span.item-info span{
+        display:block;
+    }
+    ul.dropdown-cart li .item-right{
+        float:right;
+    }
+    ul.dropdown-cart li .item-right button{
+        margin-top:14px;
+    }

@@ -1,21 +1,24 @@
+import { routerReducer, RouterReducerState } from '@ngrx/router-store';
+import { createSelector, ActionReducerMap } from '@ngrx/store';
+import { Yugioh } from '../core/model/Yu-Gi-Oh!';
+import { selectCartState } from './cart';
+import { cartReducer, CartState } from './cart/cart.reducers';
 
-import { ShopState, shopReducer } from './shops/shops.reducers';
-import { ActionReducerMap } from '@ngrx/store';
-import { RouterReducerState, routerReducer } from '@ngrx/router-store';
-import { authReducer, UserState } from './autenticazione/autenticazione.reducers';
 
-export interface AppState {// nell'appstate che è l'index.ts esterno allo shops
-    shopState: ShopState;//definisco shopState che sarà interfaccia dentro reducer
+import { UsersState, usersReducer } from './users/login.reducers';
+import { yugiohReducer, YugiohState } from './yugioh/yugioh.reducers';
 
+export interface AppState {
+    cartState: CartState;
+    usersState: UsersState;
+    yugiohState: YugiohState;
     router: RouterReducerState<any>;
-    authState: UserState;//definisco authState che è l'interfaccia che ci sarà dentro autenticazione.reducer
 }
 
-export const reducers: ActionReducerMap<AppState> = {//definizione reducer
-    shopState: shopReducer,
+export const reducers: ActionReducerMap<AppState> = {
+    usersState: usersReducer,
+    yugiohState: yugiohReducer,
     router: routerReducer,
-    authState: authReducer,
+    cartState: cartReducer,
+    
 };
-
-
-export const selectUserState = (state: AppState) => state.authState;// per il richiamo dell'user
