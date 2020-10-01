@@ -26,8 +26,5 @@ export const selectYugiohByBrand = createSelector(
     }
 );
 
-export const getCurrentNavigatedYugioh = createSelector(
-    selectYugiohState,
-    selectRouteParams,
-    (state: YugiohState, params: Params) => state.yugioh.find(item => item.id === Number(params['id']))
-);
+
+

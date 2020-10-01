@@ -19,6 +19,7 @@ export class LoginEffects{
        return users.find(actualUser=>actualUser.username === username && actualUser.password === password);
     }
     
+
     registerUser(username: string, name: string, surname: string, password: string):Observable<User>{
        return this.http.retrievePostCall<User>("users",{username, name, surname, password})
     }
@@ -28,10 +29,10 @@ export class LoginEffects{
     }
       
     loginUser$=createEffect(()=>this.actions$.pipe(
-        ofType(loginUser),
-        switchMap(action=>this.retreiveAllUsers().pipe(
+        ofType(loginUser), //"ofType" filtra un osservabile di azioni in un osservabile delle azioni a cui vengono passate le stringhe di tipo.
+        switchMap(action=>this.retreiveAllUsers().pipe(//L'operatore switchMap mappa ogni valore su un osservabile, quindi appiattisce tutte le osservabili interne.
           switchMap(users=>of(this.checkUserAccount(action.username,action.password,users)).pipe(
-            map( user=>{
+            map( user=>{//map è un operatore pipeable RxJS. map applica ad una data funzione a ogni elemento emesso dalla sorgente Observable ed emette i valori risultanti come Observable.
               if(typeof user === 'undefined'){
                 return loginUserFailure({error:'username e/o password non corretta'})
               }else{

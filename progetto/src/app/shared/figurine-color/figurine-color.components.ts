@@ -16,7 +16,7 @@ export class FigurineColorComponent implements OnInit, ControlValueAccessor {
   onChange: any = () => {};
   onTouch: any = () => {};
   value: string;
-  colors: string[] = ['black', 'white', 'gray'];
+  colors: string[] = ['yellow', 'white', 'blue'];
 
   constructor() { }
   writeValue(obj: string): void {

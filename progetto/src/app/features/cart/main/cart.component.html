@@ -8,22 +8,9 @@
       <li class="price">Price</li>
     </ul>
   </div>
-  <div class="figurine-product" *ngFor="let item of userCart | async">
-    <div class="item">
-      <div class="product-image">
-        <img [src]=[item.yugioh.img] alt="Placholder Image 2" class="product-frame">
-      </div>
-      <div class="product-details">
-        <h1><strong>{{ item.yugioh.brand | uppercase}}</strong></h1>
-          <p><strong>{{ item.yugioh.colore }}</strong></p>
-      </div>
-    </div>
-    <div class="price">{{ item.yugioh.price }}</div>
-    <div class="remove">
-      <button>Remove</button>
-    </div>
+  
   </div>
-</div>
+
 <aside>
 <div class="summary">
     <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
