@@ -12,12 +12,7 @@ export const getCartProducts = createSelector(
     (state: CartState) => state.cart
 );
 
-// export const getCartProductsByUser = createSelector(
-//     selectCartState,
-//     (state: CartState, props: {userId: number}) => {
-//         return state.cart.filter(user => user.userId === props.userId)
-//     }
-// );
+
 
 export const getNumeroProdotti = createSelector (
     selectCartState,
